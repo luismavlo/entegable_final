@@ -26,3 +26,9 @@ y haz tu marca en RealmQuest: ¡Tesoros Intercambiables!
   https://dbdiagram.io/d/64d7ab4d02bd1c4a5eacaf9a
 
 # Funcionalidades a implementar
+
+Se deben considerar los siguientes endpoints:
+| /api/v1/users |
+| HTTP VERB | ROUTE | DESCRIPTION |
+|-----------|-------|-------------|
+| POST | /signup | crear un usuario, enviar por la req.body: username, password, email, place_birth |
