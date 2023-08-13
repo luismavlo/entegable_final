@@ -1,4 +1,4 @@
-## RealmQuest: Tesoros Intercambiables
+# RealmQuest: Tesoros Intercambiables
 
 Explora el fascinante mundo de RealmQuest, un emocionante juego de aventuras y exploración en línea
 donde las oportunidades son tan vastas como los horizontes que se despliegan ante ti.
@@ -25,16 +25,30 @@ y haz tu marca en RealmQuest: ¡Tesoros Intercambiables!
   ![Diagrama entidad Relación](pictures/RealmQuest.png)
   https://dbdiagram.io/d/64d7ab4d02bd1c4a5eacaf9a
 
-# Funcionalidades a implementar
+## Funcionalidades a implementar
 
-Se deben considerar los siguientes endpoints:
-| routa | -> | /api/v1/users |
-|-----------|-------|-------------|
-| HTTP VERB | ROUTE | DESCRIPTION |
-| POST | /signup | crear un usuario, enviar por la req.body: username, password, email, place_birth |
-| POST | /signin | iniciar session, enviar por la req.body: email, password |
-| GET | / | obtener el listado de todos los usuarios |
-| GET | /:id | obtener un usuario dado un id, siendo :id el id del usuario |
-| PATCH | /:id | actualizar el username del usuario, siendo :id el id del usuario |
-| DELETE | /:id | eliminar la cuenta del usuario, siendo :id el id del usuario |
-| DELETE | /:id | banear indefinidamente la cuenta de un usuario |
+### Se deben considerar los siguientes endpoints:
+
+| routa     | ->       | /api/v1/users                                                                    |
+| --------- | -------- | -------------------------------------------------------------------------------- |
+| HTTP VERB | ROUTE    | DESCRIPTION                                                                      |
+| POST      | /signup  | crear un usuario, enviar por la req.body: username, password, email, place_birth |
+| POST      | /signin  | iniciar session, enviar por la req.body: email, password                         |
+| GET       | /        | obtener el listado de todos los usuarios                                         |
+| GET       | /:id     | obtener un usuario dado un id, siendo :id el id del usuario                      |
+| PATCH     | /:id     | actualizar el username del usuario, siendo :id el id del usuario                 |
+| DELETE    | /:id     | eliminar la cuenta del usuario, siendo :id el id del usuario                     |
+| DELETE    | /ban/:id | banear indefinidamente la cuenta de un usuario, siendo :id el id del usuario     |
+
+#### consideraciones adicionales
+
+1. Todas las rutas ecepto las post, /signup /signin deben estar protegidas por un metodo de autenticación
+2. Las rutas Get /, y delete /ban/:id deben estar protegidas para que solo usuarios gm y admin puedan utilizarla
+3. Las rutas patch /:id y delete /:id deben estar protegidas para que solo el usuario en sesión pueda ejecutarlas
+4. Validar la informacion que viene de la req.body de las rutas post y patch
+5. encriptar contraseñas
+
+notas adicionales
+
+- agregar una propiedad en la base de datos isOnline
+- agregar funcionalidad de buscar todos los jugadores online por zona
