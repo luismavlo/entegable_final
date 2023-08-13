@@ -31,5 +31,10 @@ Se deben considerar los siguientes endpoints:
 | routa | -> | /api/v1/users |
 |-----------|-------|-------------|
 | HTTP VERB | ROUTE | DESCRIPTION |
-|-----------|-------|-------------|
 | POST | /signup | crear un usuario, enviar por la req.body: username, password, email, place_birth |
+| POST | /signin | iniciar session, enviar por la req.body: email, password |
+| GET | / | obtener el listado de todos los usuarios |
+| GET | /:id | obtener un usuario dado un id, siendo :id el id del usuario |
+| PATCH | /:id | actualizar el username del usuario, siendo :id el id del usuario |
+| DELETE | /:id | eliminar la cuenta del usuario, siendo :id el id del usuario |
+| DELETE | /:id | banear indefinidamente la cuenta de un usuario |
