@@ -23,3 +23,6 @@ y haz tu marca en RealmQuest: ¡Tesoros Intercambiables!
   Hola soy el administrador de base de datos, te dejare el diagrama entidad relación
   para que realices la implementación de la base de datos.
   ![Diagrama entidad Relación](pictures/RealmQuest.png)
+  https://dbdiagram.io/d/64d7ab4d02bd1c4a5eacaf9a
+
+# Funcionalidades a implementar
