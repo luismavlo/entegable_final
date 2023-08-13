@@ -28,7 +28,7 @@ y haz tu marca en RealmQuest: ¡Tesoros Intercambiables!
 # Funcionalidades a implementar
 
 Se deben considerar los siguientes endpoints:
-| /api/v1/users | | |
+| routa | -> | /api/v1/users |
 |-----------|-------|-------------|
 | HTTP VERB | ROUTE | DESCRIPTION |
 |-----------|-------|-------------|
